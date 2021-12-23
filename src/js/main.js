@@ -23,5 +23,7 @@ function callback(entries, observer){
 
 let targets = document.querySelectorAll(".site-wrap img");
 for (const target of targets) {
-    observer.observe(target);
+    target.addEventListener("load",(event)=>{
+        observer.observe(target);
+    })
 }
